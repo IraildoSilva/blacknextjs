@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import { ReactNode, useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 
@@ -25,7 +25,6 @@ const Static: NextPage = (props: {
   staticData?: IApiResponse
 }) => {
   const [clientSideData, setClienteSideData] = useState<IApiResponse>()
-  const [staticDataISR, setStaticDataISR] = useState<string | undefined>('')
 
   useEffect(() => {
     async function fetchData() {
@@ -34,9 +33,6 @@ const Static: NextPage = (props: {
       setClienteSideData(data)
     }
 
-    setStaticDataISR(
-      (prevState) => (prevState = props.staticData?.timestamp.toString())
-    )
     fetchData()
   }, [props])
 
@@ -47,7 +43,7 @@ const Static: NextPage = (props: {
       <Row>
         <Col>
           <h3>Gerado no estaticamente durante o build:</h3>
-          <h2>{staticDataISR}</h2>
+          <h2>{props.staticData?.timestamp.toString()}</h2>
         </Col>
         <Col>
           <h3>Gerado no cliente:</h3>
