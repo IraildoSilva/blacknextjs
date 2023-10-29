@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint error consectetur modi odio obcaecati tempore dignissimos assumenda, eum reiciendis dolores magni autem at debitis voluptas. Rem ipsa deleniti autem dignissimos.
+          QUALQUER COISA PELO AMOR DE DEUS.....
         </p>
       </main>
     </>
