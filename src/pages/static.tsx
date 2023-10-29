@@ -34,7 +34,9 @@ const Static: NextPage = (props: {
       setClienteSideData(data)
     }
 
-    setStaticDataISR(props.staticData?.timestamp.toString())
+    setStaticDataISR(
+      (prevState) => (prevState = props.staticData?.timestamp.toString())
+    )
     fetchData()
   }, [props])
 
