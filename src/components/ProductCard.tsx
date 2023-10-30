@@ -22,7 +22,7 @@ export default function ProductCard({ product }: IProductCardProps) {
             src={imageUrl}
             alt="Product"
             width={200}
-            height={166}
+            height={160}
           />
         </Link>
 

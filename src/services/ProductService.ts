@@ -26,7 +26,7 @@ class ProductService implements IProductService {
     return products
   }
 
-  async getProduct(id: number) {
+  async getProduct(id: string) {
     const product: ProductType = await fetch(
       `${this.url}/api/product/${id}`
     ).then((res) => res.json())
