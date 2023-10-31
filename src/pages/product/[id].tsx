@@ -36,39 +36,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-// export const getStaticProps: GetStaticProps = async (context) => {
-//   const id = context.params?.id
-
-//   if (typeof id === 'string') {
-//     const data = await productService.getProduct(+id)
-
-//     return {
-//       props: {
-//         data,
-//       },
-//     }
-//   }
-
-//   return {
-//     redirect: {
-//       destination: '/products',
-//       permanent: false,
-//     },
-//   }
-// }
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const products = await productService.getProducts()
-
-//   const paths = products.map((product) => {
-//     return { params: { id: product.id.toString() } }
-//   })
-
-//   return {
-//     paths,
-//     fallback: false,
-//   }
-// }
 
 const Product: NextPage = (props: {
   children?: ReactNode
